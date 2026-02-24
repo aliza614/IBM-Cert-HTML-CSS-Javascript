@@ -4,6 +4,23 @@
         <title>Unit Conversions</title>
     </head>
     <body>
+        <script type="text/javascript">
+            function temperature() {
+                let fahrenheit = (document.getElementById("celsius").value * 9/5) + 32
+                console.log(fahrenheit)
+                document.getElementById("fahrenheit").value = fahrenheit
+            }
+            function weight() {
+                let pounds = (document.getElementById("kilo").value * 2.205)
+                console.log(pounds)
+                document.getElementById("pounds").value = pounds
+            }
+
+            function distance() {
+                let miles = document.getElementById("km").value / 1.609
+                document.getElementById("miles").value = miles
+            }
+        </script>
         <section id="home">
             <header><b>Unit Conversions</b></header>
         </section>
@@ -24,9 +41,10 @@
                             <legend>Temperature</legend>
                             <label for="celsius">Celsius</label> <br/>
                             <input type="number" id="celsius"> <br/>
-
-                            <input type="number" id="fahreneit"> <br/>
-                            <label for="fahreneit">Fahreneit</label>
+                            
+                            <button id="temperature" onClick="temperature()"> Convert </button> <br/>
+                            <input type="number" id="fahrenheit"> <br/>
+                            <label for="fahrenheit">Fahreneit</label>
                         </fieldset>
                     </article>
                     <aside>
@@ -53,7 +71,7 @@
                             <input type="number" id="kilo"> <br/>
             
                             <!-- The conversion button -->
-                            <button id="weight"> Convert </button> <br/>
+                            <button id="weight" onClick="weight()"> Convert </button> <br/>
             
                             <!-- Label for Weight output -->
                             <input type="number" id="pounds"> <br/>
@@ -85,7 +103,7 @@
                              <input type="number" id="km"> <br/>
             
                              <!-- The conversion button -->
-                             <button id="distance"> Convert </button> <br/>
+                             <button id="distance" onclick="distance()"> Convert </button> <br/>
             
                              <!-- Label for Distance output -->
                              <input type="number" id="miles"> <br/>
